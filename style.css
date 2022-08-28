@@ -22,7 +22,11 @@
 .maga-heading, .navbar a, #home-about, footer, .flip-card{
   text-align: center;
 }
-
+/*style all h1s*/
+h1{
+  text-shadow: 2px 2px rgb(93, 217, 255);
+  margin: 15px 0;
+}
 /*push top down, all pages*/
 .header{
   margin-top: 130px;
@@ -33,7 +37,7 @@
   font-family: 'Karla', sans-serif;
   font-style: italic;
   padding: 60px 25px;
-  text-shadow:2px 2px rgb(8, 31, 33);
+  text-shadow:3px 3px rgb(8, 31, 33);
   background: rgb(144,253,151);
 background: linear-gradient(90deg, rgba(144,253,151,1) 0%, rgba(32,67,167,1) 26%, rgba(145,255,248,1) 100%);
 }
@@ -63,11 +67,13 @@ background: linear-gradient(90deg, rgba(144,253,151,1) 0%, rgba(32,67,167,1) 26%
 /*all wrappers*/
 .wrapper{
   height: 100vh;
-  width: 65%;
   font-size: 1.8rem;
   display: block;
   margin: 0 auto;
   line-height: 1.75em;
+}
+.resourcesWrapper, .stereotypesWrapper, .historyWrapper{
+  width: 65%;
 }
 .wrapper ul{
   margin-left: 2em;
@@ -78,15 +84,15 @@ background: linear-gradient(90deg, rgba(144,253,151,1) 0%, rgba(32,67,167,1) 26%
   background-color: rgb(123, 246, 255);
   color: black;
   padding:  0 8px;
-  opacity: 0.4;
+  opacity: 0.5;
   position: fixed;
   right: 10px;
   bottom: 60px;
 }
 /*styling table of contents*/
 div.tableOfContents{
-  background-color: #ccc;
-  padding: 10px;
+  background-color: rgb(183, 237, 247);
+  padding: 5px;
   width: 30vw;
   display: block;
   margin: 0 auto;
@@ -105,10 +111,9 @@ ul.contentList{
   list-style-type: none;
 }
 .tableOfContents a{
-  text-decoration: none;
   color: black;
-  background-color: #ededeb;
-  padding: 5px;
+  font-weight: bold;
+  padding: 2px 10px;
 }
 
 /*span styling for non english words*/
@@ -131,24 +136,24 @@ span.non-english{
 .nav-header{
   flex-direction: row;
   width: 100%;
-  background-color: #333;
+  background-color: rgb(0, 0, 0);
   position: absolute;
   top: 0;
   padding: 1.5rem;
-  height: 18vh;
+  height: 15vh;
   
 }
 #logo{
   width: 150px;
   height: 65px;  
   object-fit: cover;
-  border: 1px white solid;
+  border: 1px black solid;
   border-radius: 50% 20% / 10% 40%;
 }
 /* Navbar container */
 .navbar {
   overflow: hidden;
-  background-color: #333;
+  background-color: rgb(0, 0, 0);
   font-family: Arial;
   margin: 0 10px;
   font-family: 'Karla', sans-serif;
@@ -344,7 +349,6 @@ time, .maga-details p, .maga-text{
   backface-visibility: hidden;
 }
 .flip-card-front {
-  background-color: #bbb;
   color: black;
   border-radius: 5px;
   display: flex;
@@ -357,6 +361,7 @@ time, .maga-details p, .maga-text{
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-image: linear-gradient(180deg, rgb(139, 247, 247), rgb(127, 219, 162));
 }
 .flip-icon{
   width: 10vw;
@@ -366,7 +371,7 @@ time, .maga-details p, .maga-text{
 }
 /* Style the back side */
 .flip-card-back {
-  background-color: dodgerblue;
+  background-color: rgb(13, 27, 42);
   color: white;
   transform: rotateY(180deg);
   border-radius: 5px;
@@ -395,6 +400,9 @@ time, .maga-details p, .maga-text{
   text-align: center;
 }
 /*styling the alphabet shortcuts*/
+.vocabNav{
+  margin: 15px 0;
+}
 .vocabNav ul{
   display: flex;
   flex-wrap: wrap;
@@ -477,12 +485,21 @@ span.term{
 .repWrapper ul{
   padding-left: 2em;
 }
+.repWrapper a{
+  color: blue;
+}
+.repWrapper:active{
+  color: blue;
+}
 /*rep page table of contents styling*/
 .repToc li:not(:first-of-type){
-  text-indent: 2em;
+  text-indent: 1em;
 }
 .repToc{
   text-align: left;
+}
+.repToc a{
+  color: black;
 }
 iframe{
   display:block;
@@ -490,8 +507,9 @@ iframe{
 }
 /*styling accordion - only one on rep page so far*/
 .accordion {
-  background-color: #eee;
-  color: #444;
+  background-image: linear-gradient(90deg, lightblue, lightgreen);
+  color: rgb(0, 0, 0);
+  font-weight: bold;
   cursor: pointer;
   padding: 18px;
   width: 100%;
@@ -508,7 +526,7 @@ iframe{
 
 .accordion:after {
   content: '\002B';
-  color: #777;
+  color: rgb(0, 0, 0);
   font-weight: bold;
   float: right;
   margin-left: 5px;
@@ -550,7 +568,6 @@ button.accordion{
 .voicesWrapper{
   display: block;
   text-align: center;
-  margin: 0 auto;
   font-size: 1.8rem;
 }
 .voicesForm:last-of-type{
@@ -567,7 +584,7 @@ button.accordion{
   text-align: center;
 }
 .voicesToc ul.contentList li{
-  text-indent: initial;
+  text-indent: -2em;
 }
 /*voices page flip cards sections specific*/
 .mediaCards,.orgCards{
@@ -692,6 +709,10 @@ span.cardCategory{
   display: block;
   margin: 0 auto;
 }
+/*resources specific*/
+.resourcesWrapper iframe{
+  width: 100%;
+}
 /*HISTORY specific*/
 
 /*STEREOTYPES specific*/
@@ -700,15 +721,20 @@ span.cardCategory{
 .homeftr{
   grid-area: ftr;
 }
+footer a{
+  color:white;
+}
 .ftrDown{
   position: relative;
-  margin-top: 110%;
+  margin-top: 115%;
 }
 footer{
-  font-size: 1.5rem;
+  font-size: 1.6rem;
+  color: white;
+  font-weight: 480;
   width: 100%;
   height: auto;
   margin: 15px 0px 0px 0px;
   padding: 10px;
-  background-color: lightgray;
+  background-color: rgb(10, 31, 149);
 }
