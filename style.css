@@ -570,6 +570,16 @@ button.accordion{
   text-align: center;
   font-size: 1.8rem;
 }
+.voicesWrapper .disclaimer{
+  background-color: rgb(189, 255, 189);
+  margin: 15px 0;
+  line-height: 1.75em;
+  padding: 2px;
+}
+.voicesWrapper h1{
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
 .voicesForm:last-of-type{
   margin-bottom: 20vh;
 }
