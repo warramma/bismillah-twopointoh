@@ -1,0 +1,647 @@
+*{
+  box-sizing: border-box;
+  margin: 0; 
+  padding: 0;
+}
+:root{
+  font-size: 10px;
+  --standard-fontsize: 1.8rem;
+  --borderrad-15px: 15px;
+  --borderrad-5px: 5px;
+}
+/*display flex column, center align all axes*/
+.flip-card-front, .flip-card-back, #home-about, .nav-header{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+/*text align center*/
+.maga-heading, .navbar a, #home-about, footer, .flip-card{
+  text-align: center;
+}
+
+/*push top down, all pages*/
+.header{
+  margin-top: 130px;
+  width: 100%;
+  font-size: 6.8rem;
+}
+/*all wrappers*/
+.wrapper{
+  height: 100vh;
+  width: 100%;
+}
+/*styling button that takes user to top of page*/
+.topButton{
+  font-size: 4rem;
+  background-color: #ccc;
+  padding:  0 8px;
+  opacity: 0.6;
+  position: fixed;
+  right: 10px;
+  bottom: 70px;
+}
+/*styling table of contents*/
+div.tableOfContents{
+  background-color: #ccc;
+  padding: 10px;
+  width: 30vw;
+  display: block;
+  margin: 0 auto;
+  border-radius: 15px;
+  line-height: 1.75em;
+}
+div.tableOfContents hr{
+  border: 1px solid black;
+}
+p.tocTitle{
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+}
+ul.contentList{
+  list-style-type: none;
+}
+.tableOfContents a{
+  text-decoration: none;
+  color: black;
+  background-color: #ededeb;
+  padding: 5px;
+}
+
+/*span styling for non english words*/
+span.non-english{
+  font-style: italic;
+}
+/*applies to voices and vocab page*/
+.formLinks a{
+  padding: 20px;
+  border-radius: 10px;
+  font-size: 2rem;
+  width: 30vw;
+  color: white;
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  text-decoration: none;
+  background-color: black;
+}
+.nav-header{
+  flex-direction: row;
+  width: 100%;
+  background-color: #333;
+  position: absolute;
+  top: 0;
+  padding: 1.5rem;
+  height: 18vh;
+}
+#logo{
+  width: 100px;
+  height: 100px;
+  border: 1px white solid;
+  border-radius: 50%;
+}
+/* Navbar container */
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+  font-family: Arial;
+  margin: 0 10px;
+}
+
+/* Links for navbar */
+.navbar a {
+  float: left;
+  font-size: 2rem;
+  color: white;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+/* dropdown container */
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+/* Dropdown button */
+.dropdown .dropbtn {
+  font-size: 2rem;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 1.4rem 1.6rem;
+  background-color: inherit;
+  font-family: inherit; 
+  margin: 0; 
+}
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: #90dfe9;
+  color: black;
+  border-radius:var(--borderrad-15px);
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  border-radius: var(--borderrad-15px);
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+/*start of wrapper styling*/
+/*wrapper specific*/
+.wrapper-home{
+  display: grid;
+  grid-template-columns: repeat(10,auto);
+  grid-template-rows: repeat(12,auto);
+  /*css grid work*/
+  grid-template-areas:
+    "magaz magaz magaz magaz magaz magaz magaz magaz magaz magaz"
+    "magaz magaz magaz magaz magaz magaz magaz magaz magaz magaz"
+    "magaz magaz magaz magaz magaz magaz magaz magaz magaz magaz"
+    "magaz magaz magaz magaz magaz magaz magaz magaz magaz magaz"
+    "magaz magaz magaz magaz magaz magaz magaz magaz magaz magaz"
+    "abt abt abt abt abt abt abt abt abt abt"
+    "abt abt abt abt abt abt abt abt abt abt"
+    "abt abt abt abt abt abt abt abt abt abt"
+    "lrn lrn lrn lrn lrn lrn lrn lrn lrn lrn"
+    "lrn lrn lrn lrn lrn lrn lrn lrn lrn lrn"
+    "lrn lrn lrn lrn lrn lrn lrn lrn lrn lrn"
+    "ftr ftr ftr ftr ftr ftr ftr ftr ftr ftr"
+}
+/*magazine styling*/
+#home-magazine{
+  grid-area: magaz;
+  padding: 5px;
+}
+/*magazine header*/
+.maga-heading{
+  width: 100%;
+}
+.maga-heading h1{
+  font-size: 8rem;
+}
+.maga-heading p{
+  font-size: 4rem;
+}
+.maga-details{
+  margin-top: 10px;
+}
+/*font styling!!!*/
+time, .maga-details p, .maga-text{
+  font-size: var(--standard-fontsize);
+}
+/*magazine content*/
+.maga-text{
+  column-width: 25rem;
+  padding: 25px;
+  line-height: 2rem;
+  text-indent: 2rem;
+}
+.firstpara{
+  text-indent: 0;
+}
+.maga-text blockquote p{
+  font-size: 2.2rem;
+  text-align: center;
+  margin: 10px 0;
+}
+.maga-text blockquote{
+  margin: 5px 0;
+}
+.quote::before{
+  content:'"'
+}
+.quote::after{
+  content:'"'
+}
+.speaker{
+  font-size: 1.7rem;
+}
+.firstpara:first-letter{
+  font-size: 4rem;
+  color: blue;
+  font-weight: bold;
+  float: left;
+  margin: 2rem;
+}
+/*about section on home page styling*/
+#home-about{
+  grid-area: abt;
+  font-size: var(--standard-fontsize);
+  padding:25px;
+  line-height: 1.75em;
+  display: flex;
+}
+#home-about p{
+  max-width: 60vw;
+  margin-top: 20px;
+}
+/*flip card grid styling*/
+#learn-more, .orgCards{
+  grid-area: lrn;
+  display: grid;
+  grid-template-columns: repeat(5,auto);
+  grid-template-rows: auto;
+  gap: 0.2rem;
+  padding: 20px;
+}
+/*learn more section (home) styling*/
+.flip-card {
+  background-color: transparent;
+  width: auto;
+  height: 300px;
+  border: none;
+  perspective: 1000px; /* causes 3D effect */
+  font-size: 1.6rem;
+}
+/* position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: var(--center-align);
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* css for fiip animation */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari specific*/
+  backface-visibility: hidden;
+}
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+#learn-more .flip-card-front{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.flip-icon{
+  width: 10vw;
+  margin: 2vh 0;
+  height: 10vw;
+  object-fit: cover;
+}
+/* Style the back side */
+.flip-card-back {
+  background-color: dodgerblue;
+  color: white;
+  transform: rotateY(180deg);
+  border-radius: 5px;
+  line-height: 1.5em;
+  padding: 15px;
+}
+.flip-card-back a{
+  text-decoration: none;
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 5px;
+  background-color: lightblue;
+  color: black;
+}
+.flip-card-back a:active{
+  color:black;
+}
+.flip-card-back a:hover{
+  background-color: white;
+}
+/*VOCAB specific*/
+.vocabWrapper{
+  font-size: 1.8rem;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+/*styling the alphabet shortcuts*/
+.vocabNav ul{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  list-style-type: none;
+  background-color: lightgray;
+  margin: 5px 0px;
+}
+.vocabNav ul li{
+  padding: 5px 10px;
+}
+.vocabNav a{
+  text-decoration: none;
+  color:black;
+  padding: 2px;
+  border-radius:3px;
+}
+.vocabNav a:active{
+  color: black;
+}
+.vocabNav a:hover{
+  background-color: white;
+}
+/*styling the input search bar*/
+.searchBar input{
+  padding: 10px;
+  width: 40vw;
+  max-width: 800px;
+  margin: 15px 0;
+  border-radius: 15px;
+}
+/*styling the vocabulary list*/
+.vocabList{
+  padding: 10px;
+  width: 65vw;
+  display: block;
+  margin: 0 auto; 
+  line-height: 1.75em;
+  list-style-type: none;
+}
+.vocabGroup p:first-of-type{
+  text-align: center;
+  padding: 20px;
+  font-size: 2.4rem;
+  font-style: italic;
+}
+.vocabGroup ul{
+  list-style-type: none;
+  text-align: left; 
+}
+.vocabGroup ul li{
+  margin: 20px 0;
+}
+/*styling span for vocab term*/
+span.term{
+  font-size: 2rem;
+  font-weight: bold;
+  letter-spacing: 0.05em;
+}
+
+/*REPRESENTATION specific*/
+.repWrapper{
+  padding: 20px;
+  font-size: 1.8rem;
+  height: 100%;
+  line-height: 1.75em;  
+  width: 65vw;
+  display: block;
+  margin: 0 auto;
+}
+.repWrapper h1, .repWrapper h2, .repWrapper h3, .repWrapper h4, .voicesWrapper h1{
+  margin: 15px 0;
+}
+.repWrapper ul{
+  padding-left: 2em;
+}
+/*rep page table of contents styling*/
+.repToc li:not(:first-of-type){
+  text-indent: 2em;
+}
+.repToc{
+  text-align: left;
+}
+iframe{
+  display:block;
+  margin: 15px auto;
+}
+/*styling accordion - only one on rep page so far*/
+.accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+}
+
+.active, .accordion:hover {
+  background-color: #ccc;
+}
+
+.accordion:after {
+  content: '\002B';
+  color: #777;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2212";
+}
+
+.accordText {
+  padding: 0 18px;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+.accordionAll ol, .accordionAll ul{
+  margin-left: 2em;
+}
+.accordionAll{
+  height: 100%;
+}
+.accordionAll:after{
+  padding-bottom: 20vh;
+  height: 100%;
+}
+button.accordion{
+  font-size: 1.8rem;
+  vertical-align: center;
+}
+
+/*HISTORY specific*/
+
+/*STEREOTYPES specific*/
+
+/*MUSLIM VOICES specific*/
+.mediaCards{
+  display: grid;
+  grid-template-columns: repeat(5,auto);
+  grid-template-rows: repeat(2, auto);
+  gap: 1.8rem 0.2rem;
+  
+}
+.voicesWrapper{
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+  font-size: 1.8rem;
+}
+.voicesForm:last-of-type{
+  margin-bottom: 20vh;
+}
+.voicesWrapper .introP, .voicesWrapper h1, .voicesIntro{
+  width: 65vw;
+  line-height: 1.75em;
+  display:block;
+  margin: 0 auto;
+}
+/*voicsTableofContents*/
+.voicesToc{
+  text-align: center;
+}
+.voicesToc ul.contentList li{
+  text-indent: initial;
+}
+/*voices page flip cards sections specific*/
+.mediaCards,.orgCards{
+  padding: 0px; 
+  padding-left: 10px;
+  width: 98vw;
+  line-height: initial;
+
+}
+.mediaCards.flipCards, .orgCards.flipCards{
+  padding: 0px;
+}
+
+/*style how the socials look*/
+.mediaSocials a{
+  text-decoration: none;
+  color: black;
+  padding: 2px;
+  margin: 2px 3px;
+  background-color: white;
+}
+.imgCaption{
+  margin-top: -10px;
+  font-size: 1.4rem;
+  background-color: whitesmoke;
+  padding: 1px 5px;
+  color: black;
+}
+.voice3Front img{
+  background-color: white;
+  object-fit: fill;
+}
+/*add color to media cards*/
+.voice1Front{
+  background-color:  #a7d0e8;
+  
+}
+.voice2Front{
+  background-color: #e3b2ed;
+}
+.voice2Back{
+  background-color: #ae17bf;
+}
+.voice3Front{
+  background-color: #91d9a2
+}
+.voice3Back{
+  background-color: 
+  #1c7831;
+  
+}
+.voice4Front{
+  background-color: #e88b43;
+}
+.voice4Back{
+  background-color: #ba5507;
+}
+.voice5Front{
+  background-color: #1830c9;
+  color: white;
+}
+.voice5Back{
+  background-color: #8595ff;
+  color: black;
+}
+.voice6Front, .voice7Front{
+  background-color: #cd91eb;
+}
+.voice6Back, .voice7Back{
+  background-color: #7d2ba6
+}
+.voice9Front{
+  background-color: #4b2c9e;
+  color: white;
+}
+.voice9Back{
+  background-color: #c2b1f0;
+  color: black;
+}
+.voice8Front{
+  background-color: #3b3940;
+  color: white;
+}
+.voice8Back{
+  background-color: #cbcacc;
+  color: black;
+}
+.voice10Front{
+  background-color: #f7eb7e;
+}
+.voice10Back{
+  background-color: #e8c205;
+  color: black;
+}
+/*style voices forms*/
+.formlinks{
+  display: block;
+  margin: 0 auto;
+}
+
+span.cardCategory{
+  font-weight: bold;
+}
+/*styles google sheets*/
+.mediaSheet iframe, .orgSheet iframe{
+  width: 90vw;
+  height: 40vh;
+}
+
+/*footer styling*/
+.homeftr{
+  grid-area: ftr;
+}
+.ftrDown{
+  position: relative;
+  margin-top: 110%;
+}
+footer{
+  font-size: 1.5rem;
+  width: 100%;
+  height: auto;
+  margin: 15px 0px 0px 0px;
+  padding: 10px;
+  background-color: lightgray;
+}
