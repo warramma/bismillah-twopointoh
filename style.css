@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,400;0,500;1,500;1,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,400;0,500;1,500;1,600&family=Nunito:ital,wght@0,400;0,500;1,400&display=swap');
 *{
   box-sizing: border-box;
   margin: 0; 
@@ -6,6 +6,7 @@
 }
 :root{
   font-size: 10px;
+  font-family: 'Nunito', sans-serif;
   --standard-fontsize: 1.8rem;
   --borderrad-15px: 15px;
   --borderrad-5px: 5px;
@@ -25,12 +26,39 @@
 /*push top down, all pages*/
 .header{
   margin-top: 130px;
+  margin-bottom: 25px;
   width: 100%;
+  color: white;
   font-size: 8rem;
   font-family: 'Karla', sans-serif;
   font-style: italic;
-  padding: 25px;
+  padding: 60px 25px;
+  text-shadow:2px 2px rgb(8, 31, 33);
+  background: rgb(144,253,151);
+background: linear-gradient(90deg, rgba(144,253,151,1) 0%, rgba(32,67,167,1) 26%, rgba(145,255,248,1) 100%);
+}
+/*typewriter effect for headers*/
+.header p {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid rgb(255, 255, 255); /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .1em; /* Adjust as needed */
+  animation: 
+    typing 3.5s steps(40, end),
+    blink-caret .75s step-end infinite;
+}
 
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: rgb(255, 255, 255); }
 }
 /*all wrappers*/
 .wrapper{
@@ -47,12 +75,13 @@
 /*styling button that takes user to top of page*/
 .topButton{
   font-size: 4rem;
-  background-color: #ccc;
+  background-color: rgb(123, 246, 255);
+  color: black;
   padding:  0 8px;
-  opacity: 0.6;
+  opacity: 0.4;
   position: fixed;
   right: 10px;
-  bottom: 70px;
+  bottom: 60px;
 }
 /*styling table of contents*/
 div.tableOfContents{
@@ -107,12 +136,14 @@ span.non-english{
   top: 0;
   padding: 1.5rem;
   height: 18vh;
+  
 }
 #logo{
-  width: 100px;
-  height: 100px;
+  width: 150px;
+  height: 65px;  
+  object-fit: cover;
   border: 1px white solid;
-  border-radius: 50%;
+  border-radius: 50% 20% / 10% 40%;
 }
 /* Navbar container */
 .navbar {
@@ -120,12 +151,14 @@ span.non-english{
   background-color: #333;
   font-family: Arial;
   margin: 0 10px;
+  font-family: 'Karla', sans-serif;
+  font-style: italic;
 }
 
 /* Links for navbar */
 .navbar a {
   float: left;
-  font-size: 2rem;
+  font-size: 2.4rem;
   color: white;
   padding: 14px 16px;
   text-decoration: none;
@@ -134,17 +167,20 @@ span.non-english{
 .dropdown {
   float: left;
   overflow: hidden;
+  font-family: 'Karla', sans-serif;
+  font-style: italic;
 }
 
 /* Dropdown button */
 .dropdown .dropbtn {
-  font-size: 2rem;
+  font-size: 2.4rem;
   border: none;
   outline: none;
   color: white;
   padding: 1.4rem 1.6rem;
   background-color: inherit;
-  font-family: inherit; 
+  font-family: 'Karla', sans-serif;
+  font-style: italic;
   margin: 0; 
 }
 .navbar a:hover, .dropdown:hover .dropbtn {
@@ -413,6 +449,11 @@ time, .maga-details p, .maga-text{
 .vocabGroup ul li{
   margin: 20px 0;
 }
+.vocabWrapper footer{
+  display:block;
+  margin-left: -265px;
+  width: 98.5vw;
+}
 /*styling span for vocab term*/
 span.term{
   font-size: 2rem;
@@ -645,6 +686,11 @@ span.cardCategory{
 }
 .contactWrapper h1{
   margin: 15px 0;
+}
+.contactWrapper img{
+  width: 70%;
+  display: block;
+  margin: 0 auto;
 }
 /*HISTORY specific*/
 
