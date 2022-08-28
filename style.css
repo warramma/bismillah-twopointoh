@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,400;0,500;1,500;1,600&display=swap');
 *{
   box-sizing: border-box;
   margin: 0; 
@@ -25,12 +26,23 @@
 .header{
   margin-top: 130px;
   width: 100%;
-  font-size: 6.8rem;
+  font-size: 8rem;
+  font-family: 'Karla', sans-serif;
+  font-style: italic;
+  padding: 25px;
+
 }
 /*all wrappers*/
 .wrapper{
   height: 100vh;
-  width: 100%;
+  width: 65%;
+  font-size: 1.8rem;
+  display: block;
+  margin: 0 auto;
+  line-height: 1.75em;
+}
+.wrapper ul{
+  margin-left: 2em;
 }
 /*styling button that takes user to top of page*/
 .topButton{
@@ -486,11 +498,6 @@ button.accordion{
   font-size: 1.8rem;
   vertical-align: center;
 }
-
-/*HISTORY specific*/
-
-/*STEREOTYPES specific*/
-
 /*MUSLIM VOICES specific*/
 .mediaCards{
   display: grid;
@@ -628,6 +635,20 @@ span.cardCategory{
   width: 90vw;
   height: 40vh;
 }
+/*contact page specific*/
+.contactWrapper{
+  font-size: 1.8rem;
+  display: block;
+  margin: 2rem auto;
+  width: 65%;
+  line-height: 1.75em;
+}
+.contactWrapper h1{
+  margin: 15px 0;
+}
+/*HISTORY specific*/
+
+/*STEREOTYPES specific*/
 
 /*footer styling*/
 .homeftr{
