@@ -459,8 +459,7 @@ time, .maga-details p, .maga-text{
 }
 .vocabWrapper footer{
   display:block;
-  margin-left: -265px;
-  width: 98.5vw;
+  width: 100vw;
 }
 /*styling span for vocab term*/
 span.term{
